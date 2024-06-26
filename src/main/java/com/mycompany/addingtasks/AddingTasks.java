@@ -8,6 +8,8 @@ package com.mycompany.addingtasks;
  *
  * @author User
  */
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class AddingTasks {
@@ -18,12 +20,20 @@ public class AddingTasks {
      String taskName = "";
      String totalHours = "";
      String taskDetails = "";
+     String developer = "";
+     String taskId = "";
+     String duration = "";
+     String status = "";
+     String done = "";
+     
+     
+     
      /*Reference  Creating and USing Constructors
      Farrel(2023) states that to call a class you type to class name and assign it an object statement, 
      for example ' Employee chauffeur = new Employee();'
     */
-     Tasks user = new Tasks();
-          
+     
+      Tasks user = new Tasks();    
             /*
             McKenzie(2022)
              */
@@ -47,6 +57,7 @@ public class AddingTasks {
                
             String[] options2 = {"To Do", "Done", "Doing"}; //options2 is the second set of options that the user can pick from
             selection = JOptionPane.showOptionDialog(null, "Task Status","Status", 0, 3 , null, options2, options2[0]);
+            
          
                 developerDetails = JOptionPane.showInputDialog(null,"Please enter your first and last name");
 
@@ -58,15 +69,31 @@ public class AddingTasks {
         
                 JOptionPane.showMessageDialog(null, " Developer Details: " + developerDetails + "Task Number:" + taskNumber + "Task Name:" + taskName + "Task Description:" + user.taskDescription +"Task Duration:" + totalHours);
         
-                
                }if(selection == 1){
                   JOptionPane.showMessageDialog(null,"Coming Soon");              
-               } 
+               
+               }if(selection == 1 ){
+               
+               done = JOptionPane.showInputDialog(null, "Option 1).Developer Details" +"\n"+ "Option 2). Task Name" +"\n"+ "Option 3). Task Duration" +"\n"+ "Option 4).Task Status" +"\n"+ "Option 5). Search task by name" +"\n"+ "Option 6). Search task by developer" +"\n"+ "Option 7). Delete task by name");
+               if(done == "Option 1). Developer Details"){
+               JOptionPane.showMessageDialog(null, "Developer Details:" +"\n"+ developerDetails);
+               }else if(done == "Option 2). Task Name"){
+               JOptionPane.showMessageDialog(null, "Task Name:" +"\n"+ taskName);
+               }else if(done == "Option 3). Task Duration"){
+               JOptionPane.showMessageDialog(null, "Task Duration:" +"\n"+ totalHours);
+               }else if(done == "Option 5). Search task by name"){
+               JOptionPane.showMessageDialog(null, "Task:" +"\n"+ taskName);
+               }else if(done == "Option 6). Search task by developer");
+               JOptionPane.showMessageDialog(null, "Task:" +"\n"+ taskName);
+               
+               
+               
                /*Reference equivalence
             Farrell(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
             is called the equivalency operator(==).
             */  
         }
+}
 }
              
             /*Referencing 

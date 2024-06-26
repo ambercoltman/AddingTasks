@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -20,7 +21,9 @@ public class Tasks {
      public String developerDetails;
      public String taskDetails;
      public int totalHours;
-
+     public String task;
+     public String taskStatus;
+  
      /*Reference if...else statement
      Farrell(2023) states that the if...else statement does one actions as long as the boolean expression is true, and if it is false it performs a different action
      */
@@ -33,10 +36,22 @@ public class Tasks {
       return false;
       }
     
+    public boolean task(String developerDetails, String taskName, String taskID, int totalHours, String taskStatus){
+        this.developerDetails = developerDetails;
+        this.taskName = taskName;
+        this.taskID = taskID;
+        this.totalHours = totalHours;
+        this.taskStatus = taskStatus;
+       return false;
+        
+      
+}
+    
+    
 }  
 
             /*Referencing 
             Farrel,J.2023.Java Programming Tenth Edition.Boston: Cengage
-            */
+            */  
 
-  
+    
