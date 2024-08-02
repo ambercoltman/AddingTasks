@@ -27,7 +27,6 @@ public class AddingTasks {
      String done = "";
      
      
-     
      /*Reference  Creating and USing Constructors
      Farrel(2023) states that to call a class you type to class name and assign it an object statement, 
      for example ' Employee chauffeur = new Employee();'
@@ -39,22 +38,20 @@ public class AddingTasks {
              */
             String[] options1 = {"Option 1). Add tasks", "Option 2). Show report", "Option 3). Quit"}; //options1 is the first set of options that the user can pick from
             var selection = JOptionPane.showOptionDialog(null, "Welcome to EasyKanban","Option", 0, 3 , null, options1, options1[0]);
-
+                 
+                taskNumber = JOptionPane.showInputDialog(null,"Please enter the amount of tasks"); 
+                while(selection == 0){ 
+            /*Reference while loop
+            Farrell(2023) states that while loops are used when you want the body of your code to continue running as long as the boolean expressions stays true
+            */
+            /*Reference comparing to Zero
+            Farrell(2023) indicates that it is faster to compare to zero than to any other value.
+            */ 
             /*Reference equivalence
             Farrell(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
             is called the equivalency operator(==).
             */
             
-            while(selection == 0){ 
-                /*Reference while loop
-                Farrell(2023) states that while loops are used when you want the body of your code to continue running as long as the boolean expressions stays true
-                */
-               /*Reference comparing to Zero
-                Farrell(2023) indicates that it is faster to compare to zero than to any other value.
-                */ 
-               
-                taskNumber = JOptionPane.showInputDialog(null,"Please enter the amount of tasks"); 
-               
             String[] options2 = {"To Do", "Done", "Doing"}; //options2 is the second set of options that the user can pick from
             selection = JOptionPane.showOptionDialog(null, "Task Status","Status", 0, 3 , null, options2, options2[0]);
             
@@ -67,34 +64,38 @@ public class AddingTasks {
 
                 totalHours = JOptionPane.showInputDialog(null, "Please enter the hours it took you to complete the task");
         
-                JOptionPane.showMessageDialog(null, " Developer Details: " + developerDetails + "Task Number:" + taskNumber + "Task Name:" + taskName + "Task Description:" + user.taskDescription +"Task Duration:" + totalHours);
+                JOptionPane.showMessageDialog(null, " Developer Details: " + developerDetails + "Task Number:" + taskNumber + 
+                                             "Task Name:" + taskName + "Task Description:" + user.taskDescription +"Task Duration:" 
+                                             + totalHours);
         
-               }if(selection == 1){
-                  JOptionPane.showMessageDialog(null,"Coming Soon");              
+               }if(selection == 1){                        
+              String[] options3 = {"Done Tasks","Longest Task", "Search by task name", 
+                                   "Search by developer", "Report", "Exit"};  
+              selection = JOptionPane.showOptionDialog(null, "Please make a selection:", "Task Manager", 0, 3, null, options3, options3 [0]);
+              
+              if(selection == 0){
+                  JOptionPane.showMessageDialog(null, "Done Tasks" + user.doneTasks());
+              }else if(selection == 1){   
+                  JOptionPane.showMessageDialog(null, "Longest Task" + user.longestTasks());
+              }else if(selection == 2){
+                  JOptionPane.showMessageDialog(null, "Report" + user.displayReport());
+               }
+            }
                
-               }if(selection == 1 ){
-               
-               done = JOptionPane.showInputDialog(null, "Option 1).Developer Details" +"\n"+ "Option 2). Task Name" +"\n"+ "Option 3). Task Duration" +"\n"+ "Option 4).Task Status" +"\n"+ "Option 5). Search task by name" +"\n"+ "Option 6). Search task by developer" +"\n"+ "Option 7). Delete task by name");
-               if(done == "Option 1). Developer Details"){
-               JOptionPane.showMessageDialog(null, "Developer Details:" +"\n"+ developerDetails);
-               }else if(done == "Option 2). Task Name"){
-               JOptionPane.showMessageDialog(null, "Task Name:" +"\n"+ taskName);
-               }else if(done == "Option 3). Task Duration"){
-               JOptionPane.showMessageDialog(null, "Task Duration:" +"\n"+ totalHours);
-               }else if(done == "Option 5). Search task by name"){
-               JOptionPane.showMessageDialog(null, "Task:" +"\n"+ taskName);
-               }else if(done == "Option 6). Search task by developer");
-               JOptionPane.showMessageDialog(null, "Task:" +"\n"+ taskName);
-               
+    }
+   
+}
+            
+        
                
                
                /*Reference equivalence
             Farrell(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
             is called the equivalency operator(==).
             */  
-        }
-}
-}
+        
+
+
              
             /*Referencing 
             Farrell,J.2023.Java Programming Tenth Edition.Boston: Cengage
