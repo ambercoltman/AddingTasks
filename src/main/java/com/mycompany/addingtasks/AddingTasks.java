@@ -81,20 +81,19 @@ public class AddingTasks {
                   JOptionPane.showMessageDialog(null, "Report" + user.displayReport());
                }
             }
+               /*Reference if...else statement
+                Farrell(2023) states that the if...else statement does one actions as long as the boolean expression is true, and if it is false it performs a different action
+              */
                
-    }
-   
-}
-            
-        
-               
-               
+    }              
                /*Reference equivalence
-            Farrell(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
-            is called the equivalency operator(==).
-            */  
+               Farrell(2023) indicates that the double equal to sign is used to show the equivalence that the two expressions have, this equal to sign 
+               is called the equivalency operator(==).
+              */   
         
 
+   
+}   
 
              
             /*Referencing 

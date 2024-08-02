@@ -39,17 +39,13 @@ public class Tasks {
       return false;
       }
     
-  
+    /*Reference Declaring Array
+     Farrell(2023) states that the size of the array always follows the data type and it is not declared right away following the array name
+    */
     
-    public static String Options[][] = new String[6][1];
-    public static void optionChoices(){
-        Options[0][1]= "Done Tasks";
-        Options[1][1]= "Longest Task";
-        Options[2][1]= "Search by task";
-        Options[3][1]= "Search by developer";
-        Options[4][1]= "Display Report";
-        Options[5][1]= "Exit";
-    }
+    /*Reference Initializing Array
+    Farrell(2023) states that a single element in an array gets assigned witha different value
+    */
     public static String List[][] = new String[4][4];
     public static void arrayList(){
       List[0][0]="Mike Smith";
