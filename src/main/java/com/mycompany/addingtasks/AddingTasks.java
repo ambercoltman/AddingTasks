@@ -39,8 +39,9 @@ public class AddingTasks {
             String[] options1 = {"Option 1). Add tasks", "Option 2). Show report", "Option 3). Quit"}; //options1 is the first set of options that the user can pick from
             var selection = JOptionPane.showOptionDialog(null, "Welcome to EasyKanban","Option", 0, 3 , null, options1, options1[0]);
                  
-                taskNumber = JOptionPane.showInputDialog(null,"Please enter the amount of tasks"); 
                 while(selection == 0){ 
+                taskNumber = JOptionPane.showInputDialog(null,"Please enter the amount of tasks"); 
+                
             /*Reference while loop
             Farrell(2023) states that while loops are used when you want the body of your code to continue running as long as the boolean expressions stays true
             */
